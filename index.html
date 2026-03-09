@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Catálogo Digital</title>
+</head>
+
+<body>
+
+    <!-- Sección de Introducción -->
+    <header>
+        <nav>
+            <a href="#">Inicio</a> |
+            <a href="#Productos">Lista de Productos</a> |
+            <a href="#ProductoDestacado">Producto destacado</a> |
+            <a href="#contacto">Contacto</a> |
+            <a href="https://wa.me/5217711391026?text=Hola%20quiero%20más%20información%20sobre%20Catálogo%20Digital"
+                target="_blank">WhatsApp</a>
+        </nav>
+
+        <h1>Catálogo de Productos</h1>
+        <p>Bienvenido a nuestra tienda en línea. Aquí podrás comparar nuestros productos disponibles.
+        </p>
+
+    </header>
+
+    <!-- Filtros de Productos -->
+    <section>
+        <h2>Filtrar Productos</h2>
+
+        <form>
+            <label for="categoria">Categoría:</label>
+            <select id="categoria" name="categoria">
+                <option value="">Todas</option>
+                <option value="electrodomesticos">Electrodomésticos</option>
+            </select>
+
+            <label for="precio">Precio máximo:</label>
+            <input type="number" id="precio" name="precio" placeholder="Ej. 1000">
+
+            <label for="disponibilidad">Disponibilidad:</label>
+            <select id="disponibilidad" name="disponibilidad">
+                <option value="">Todas</option>
+                <option value="disponible">Disponible</option>
+                <option value="no">No disponible</option>
+            </select>
+
+            <button type="submit">Aplicar filtros</button>
+        </form>
+    </section>
+
+    <!-- Sección de Tabla de Productos -->
+    <section id="Productos">
+        <h2>Lista de Productos</h2>
+
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Categoría</th>
+                    <th>Precio</th>
+                    <th>Disponibilidad</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Batidora</td>
+                    <td>Electrodomésticos</td>
+                    <td>$1,200</td>
+                    <td>Disponible</td>
+                </tr>
+                <tr>
+                    <td>Licuadora</td>
+                    <td>Electrodomésticos</td>
+                    <td>$950</td>
+                    <td>Disponible</td>
+                </tr>
+                <tr>
+                    <td>Cafetera</td>
+                    <td>Electrodomésticos</td>
+                    <td>$800</td>
+                    <td>No disponible</td>
+                </tr>
+                <tr>
+                    <td>Tostador</td>
+                    <td>Electrodomésticos</td>
+                    <td>$650</td>
+                    <td>Disponible</td>
+                </tr>
+                <tr>
+                    <td>Horno eléctrico</td>
+                    <td>Electrodomésticos</td>
+                    <td>$1,500</td>
+                    <td>Disponible</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Sección de Producto Destacado -->
+    <section id="ProductoDestacado">
+        <h2>Producto Destacado</h2>
+
+        <figure>
+            <img src="img/batidora.jpg" alt="Batidora eléctrica" width="150">
+            <figcaption>Batidora eléctrica de alta potencia con 5 velocidades y motor de 700W.</figcaption>
+        </figure>
+
+        <ul>
+            <li>Alta potencia</li>
+            <li>5 velocidades</li>
+            <li>Garantía de 2 años</li>
+        </ul>
+
+    </section>
+
+    <!-- Sección Multimedia -->
+    <section>
+        <h2>Demostración en Video</h2>
+
+        <video width="400" controls>
+            <source src="img/Comercial.mp4" type="video/mp4">
+            Tu navegador no soporta el video.
+        </video>
+
+        <h2>Audio Promocional</h2>
+
+        <audio controls>
+            <source src="audio/bgmusic.mp3" type="audio/mpeg">
+            Tu navegador no soporta el audio.
+        </audio>
+    </section>
+
+    <!-- Sección de Reseñas -->
+    <section>
+        <h2>Reseñas de Clientes</h2>
+
+        <article>
+            <h3>Ana Martínez</h3>
+            <blockquote>
+                La batidora es excelente, tiene mucha potencia y es muy fácil de limpiar.
+            </blockquote>
+            <cite>⭐⭐⭐⭐⭐</cite>
+        </article>
+
+        <article>
+            <h3>Carlos López</h3>
+            <blockquote>
+                Compré la licuadora y funciona muy bien para hacer smoothies. La recomiendo.
+            </blockquote>
+            <cite>⭐⭐⭐⭐</cite>
+        </article>
+
+        <article>
+            <h3>María Gómez</h3>
+            <blockquote>
+                La cafetera prepara café muy rápido y el sabor queda perfecto.
+            </blockquote>
+            <cite>⭐⭐⭐⭐⭐</cite>
+        </article>
+
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto">
+        <h2>Contacto</h2>
+
+        <p>¿Tienes dudas? Escríbenos:</p>
+
+        <h3>Formulario de contacto</h3>
+
+        <p id="mensaje-envio" style="display:none;">¡Gracias! Tu mensaje fue enviado correctamente.</p>
+
+        <form action="https://formspree.io/f/xqeyabye" method="POST" enctype="multipart/form-data">
+            <!-- Formulario que envía datos a Formspree usando método POST -->
+            <form id="contacto-form" action="#" method="post">
+
+                <label for="nombre">Nombre:</label><br>
+                <input type="text" id="nombre" name="nombre" required minlength="3"><br><br>
+
+                <label for="email">Correo electrónico:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="mensaje">Mensaje:</label><br>
+                <textarea id="mensaje" name="mensaje" required></textarea><br><br>
+
+                <label for="pais">País:</label><br>
+                <select id="pais" name="pais">
+                    <option value="mx">México</option>
+                    <option value="ar">Argentina</option>
+                    <option value="es">España</option>
+                </select><br><br>
+
+                <button type="submit">Enviar</button>
+                <button type="reset">Limpiar</button>
+
+            </form>
+    </section>
+
+</body>
+
+<footer>
+    <br><br>
+    <p>&copy; 2026 Catálogo Digital. Todos los derechos reservados.</p>
+
+    <a href="https://wa.me/5217711391026?text=Hola" target="_blank">
+        <img src="img/Whatsapp.gif" width="50" height="50" alt="WhatsApp">
+
+    </a>
+
+</footer>
+
+</html>
